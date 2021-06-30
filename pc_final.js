@@ -76,7 +76,7 @@ coins.forEach(coin => {
                         if(checkType(coinData.type)) { // 之前是开多
                           earn = 1000*(price - coinData.price)/coinData.price
                         } else { // 之前是开空
-                          earn = 1000*(coinData.price - price)/price
+                          earn = 1000*(coinData.price - price)/coinData.price
                         }
                         db.get(`${coin}.data.${lable}`).push({
                           openPrice: coinData.price,
